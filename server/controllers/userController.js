@@ -8,7 +8,8 @@ const Post = require("../models/Post");
 const addToFavourite = async (req, res) => {
   try {
     const userId = req.user._id;
-    const postId = req.params.postId;
+    const postId = req.params.id; 
+
 
     // Check whether post already exists in favourites
     const existingFavourite = await Favourite.findOne({
